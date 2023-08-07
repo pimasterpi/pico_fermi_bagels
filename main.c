@@ -6,16 +6,15 @@
 int main() {
     srand(time(NULL));
 
-    int sequence[4] = {0};
+    int sequence[4] = {4, 0, 0, 8};
     int seq_int[10] = {0};
 
 
 
     for (int i = 0; i < 4; i++) {
-        sequence[i] = rand() % 10;
+        //sequence[i] = rand() % 10;
         seq_int[sequence[i]]++;
     }
-    printf("\n");
 
     int input = 0;
     int guess[4] = {0};
@@ -64,6 +63,7 @@ int main() {
                     if ((guess[i] == sequence[j]) && (!print[j])) {
                         pico_print[guess[i]]++;
                         pico++;
+                        break;
                     }
                 }
             }
